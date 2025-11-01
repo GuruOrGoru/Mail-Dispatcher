@@ -19,8 +19,8 @@ func main() {
 		}
 	}()
 
-	workerCount := 15
-	limiter := rate.NewLimiter(rate.Limit(15), 20)
+	workerCount := 200
+	limiter := rate.NewLimiter(rate.Limit(1), 200)
 	wg.Add(workerCount)
 
 	for i := 1; i <= workerCount; i++ {
